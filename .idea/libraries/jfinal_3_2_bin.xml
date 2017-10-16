@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jfinal-3.2-bin">
+    <CLASSES>
+      <root url="jar://D:/jfinal/jfinal-3.2-all/jfinal-3.2-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

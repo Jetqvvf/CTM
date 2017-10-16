@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CTM-alpha:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CTM_alpha_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CTM-alpha/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CTM-alpha" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="jfinal-3.2-bin" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
