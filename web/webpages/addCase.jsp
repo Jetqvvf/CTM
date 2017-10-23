@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../static/bootstrap-fileinput/js/plugins/sortable.js" type="text/javascript"></script>
     <script src="../static/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
-    <script src="../static/bootstrap-fileinput/js/locales/fr.js" type="text/javascript"></script>
+    <script src="../static/bootstrap-fileinput/js/locales/zh.js" type="text/javascript"></script>
     <script src="../static/bootstrap-fileinput/js/locales/es.js" type="text/javascript"></script>
     <script src="../static/bootstrap-fileinput/themes/explorer-fa/theme.js" type="text/javascript"></script>
     <script src="../static/bootstrap-fileinput/themes/fa/theme.js" type="text/javascript"></script>

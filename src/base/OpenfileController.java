@@ -27,36 +27,34 @@ public class OpenfileController extends Controller {
             InputStream in = file.getInputStream();
             String text = inputStreamToString(in);
 
-            String[] obs = text.split("/n");
-            String[] headers = new String[obs[0].split(",").length];
+            String[] obs = text.split("\n");
+            String[] headers = obs[0].split("\t");
 
-            for(int i = 0; i < obs.length; i++) {
-                String[] items = obs[i].split(",");
+            for(int i = 1; i < obs.length; i++) {
+                String[] items = obs[i].split("\t");
 
-                if(i == 0) {
-                    headers = items;
-                    continue;
-                }
                 for(int j = 0; j < items.length; j++) {
                     tempJson.put(headers[j],items[j]);
                 }
-                result.put(i,tempJson);
+                result.accumulate("page_data",tempJson);
             }
 
             file.delete();
         } catch (Exception e) {}
 
-        renderJson(result);
+        result.put("total_rows",20);
+        JsonBase.setJson(result);
+        renderJson();
     }
 
     public String inputStreamToString(InputStream is) throws Exception{
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is,"UTF-8"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
         String line = null;
 
         try {
             while ((line = reader.readLine()) != null) {
-                sb.append(line + "/n");
+                sb.append(line + "\n");
             }
         }
         catch (IOException e) {}
